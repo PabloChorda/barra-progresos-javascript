@@ -1,0 +1,118 @@
+html{
+    font-size: 10px;
+
+}
+
+body{
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    background-color: #F4EEE0;
+}
+
+.layout{
+    width: 100%;    
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout__main{
+    display: flex;
+    flex-direction: row;
+    height: 40rem;
+
+}
+
+.main__steps{
+    position: relative;
+    margin-right: 4rem;
+}
+
+.steps__bar,
+.steps__progress{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    width: 0.5rem;
+    transition: all 300ms ease-in-out;
+}
+
+.steps__progress{
+    height: 100%;
+    background-color: #cbd0cc ;
+}
+
+.steps__bar{
+    height: 0%;
+    background-color: #29A19C ;
+}
+
+.steps__circles{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.steps__step{
+    background-color: #fff;
+    border-radius: 5rem;
+    border: 3px solid #cbd0cc;
+    width: 3rem;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #5c6f84;
+    transition: all 300ms linear;
+}
+
+.steps__step > .fa-solid{
+    opacity: 0;
+    transition: all 300ms linear;
+}
+
+.active{
+    border: 3px solid #29A19C;
+}
+
+.active > .fa-solid{
+    opacity: 1;
+}
+
+.main__btns{
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+.btns__prev, .btns__next{
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: #29A19C;
+    padding: 1rem;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 300ms linear;
+
+}
+
+.disable{
+    background-color: #cbd0cc;
+    cursor: not-allowed;
+}
